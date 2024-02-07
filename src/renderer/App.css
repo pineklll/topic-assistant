@@ -1,0 +1,80 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body {
+  position: relative;
+  color: black;
+  background: rgb(212, 206, 196);
+  font-family: sans-serif;
+  overflow-y: hidden;
+  /* display: flex;
+  justify-content: center;
+  align-items: stretch; */
+  /* min-height: 100vh; */
+}
+
+button {
+  background-color: gold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  appearance: none;
+  font-size: 1.3rem;
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  height: fit-content;
+  width: fit-content;
+  margin: 10px;
+}
+
+a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.Hello {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.input-hello {
+  left: 0;
+  /* display: none; */
+  opacity: 0;
+  /* 使输入框透明 */
+  position: absolute;
+  /* 使输入框脱离文档流 */
+  pointer-events: auto;
+  /* 允许用户与元素交互 */
+}

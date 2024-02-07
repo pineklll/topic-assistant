@@ -1,0 +1,41 @@
+.toggle-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  padding: 4px;
+  height: 70%;
+}
+
+.toggle-switch {
+  background-color: #89a8d8;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle-handle {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-handle span {
+  display: inline-block;
+}
+
+.toggle-container.active .toggle-handle {
+  background-color: #27ae60;
+}
+
+.toggle-container.active .toggle-handle span {
+  content: "OR";
+  color: #ffffff;
+}

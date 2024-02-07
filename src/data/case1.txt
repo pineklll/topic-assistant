@@ -1,0 +1,266 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+
+\usepackage{titlesec}
+\usepackage{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{titling}
+
+\newcommand{\watermark}[3]{\AddToShipoutPictureBG{
+\parbox[b][\paperheight]{\paperwidth}{
+\vfill%
+\centering
+\tikz[remember picture, overlay]%
+\node [rotate = #1, scale = #2] at (current page.center)%
+{\textcolor{gray!80!cyan!30}{#3}};
+\vfill}}}
+
+\newcommand{\R}{\mathrm{\textbf{R}}}
+\newcommand{\N}{\mathrm{\textbf{N}}}
+\newcommand{\Z}{\mathrm{\textbf{Z}}}
+\newcommand{\C}{\mathrm{\textbf{C}}}
+\newcommand{\com}{\mathrm{C}}
+
+\newcommand{\beqnn}{\begin{eqnarray*}}
+\newcommand{\eeqnn}{\end{eqnarray*}}
+\newcommand{\beqn}{\begin{eqnarray}}
+\newcommand{\eeqn}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\np}{\newpage}
+\newcommand{\tri}{\triangle}
+
+\theoremstyle{plain}
+\newtheorem{ex}{Problem}[section]
+
+\newcommand{\bex}{\begin{ex}}
+\newcommand{\eex}{\end{ex}}
+\newpagestyle{main}{ 
+\sethead{2020秋季讲义}{}{陈晨译} %设置页眉
+\setfoot{}{\thepage}{} %设置页脚，可以在页脚添加 \thepage 显示页数
+\headrule % 添加页眉的下划线
+\footrule %添加页脚的下划线
+}
+\begin{document}
+
+
+\pagestyle{main} 
+
+\title{2020秋季讲义}
+\author{陈晨 译 \\
+其中2019 IMO 预选题 部分为 Photaesthesia 同学翻译}
+
+\maketitle
+（秋季最后两次课从USAMO开始）
+
+
+
+\section{2020年中国TST}
+\bex
+1. $\omega$ 是 $n$ 次单位根. 复数 $a_{1}, a_{2}, \ldots, a_{n}$ 中有 $p$ 个非零的.
+[
+b_{k}=\sum_{i=1}^{n} a_{i} \omega^{k i}
+]
+若 $p>0,$ 那么复数 $b_{1}, \ldots, b_{n}$ 中非零元素个数不小于 $\frac{n}{p}$\eex
+
+\bex
+
+等腰$\triangle ABC$中$AB=AC$,$M$为$BC$中点，$D$在$AB$上，$E$在$CA$延长线上，使得$M,D,E$共线。$K$为$DM$内一点，且圆$BDK$与圆$CEK$的另一交点为$L$. $F$为线段$EM$上满足$EF=DM$的点。已知圆$LKM$与圆$DLE$关于$L$对称，求证$BF\perp BC$.
+\eex
+
+\bex
+对非空有限正整数集 $A,$ 定义 $lcm(A)$ 是 $A$ 中元素的最小公倍数, $d(A)$ 是 $lcm(A)$ 的
+索因子个数 (计重数)。给定有限正整数集 S, 以及
+[
+f_{S}(x)=\sum_{\theta \neq A \subseteq S} \frac{(-1)^{|A|} x^{d(A)}}{lcm(A)}
+]
+证明: 若 $0 \leq x \leq 2,$ 则 $-1 \leq f(x) \leq 0$ \eex
+
+\bex 
+证明如下方程只有有限组正整数解 $(t, A, x, y, z)$
+[
+\sqrt{t\left(1-A^{-2}\right)\left(1-x^{-2}\right)\left(1-y^{-2}\right)\left(1-z^{-2}\right)}=\left(1+x^{-1}\right)\left(1+y^{-1}\right)\left(1+z^{-1}\right)
+]
+\eex
+
+\bex
+对所有 $a_{1}, a_{2}, \ldots, a_{n}$ 是 $1,2, \ldots, n$ 的排列, 求下式的最小值.
+[
+\sum_{i=1}^{n} \min \left\{a_{i}, 2 i-1\right\}
+]
+\eex
+
+\bex
+一个 $n$ 个顶点的简单连通图有 m 条边。证明可以找到 m 种方法使得把它的顶点集
+分成两部分，使得每部分对应的诱导子图是连通的。
+\eex
+
+\section{2020年中国CGMO}
+\bex
+凸四边形$ABCD$中, $AB=AD$, $CB=CD$, $\angle ABC =90^\circ$. $E$, $F$ 分别在 $AB$, $AD$ 上 $P$, $Q$ 在 $EF$上($P$ 在 $E, Q$之间), 满足 $\frac{AE}{EP}=\frac{AF}{FQ}$. $X, Y$ 分别在$CP, CQ$ 上满足$BX \perp CP, DY \perp CQ$. 证明 $X, P, Q, Y$ 共圆.
+\eex
+
+\bex
+给定 $n$ 为正整数且$n \geq 2$, $x_1, x_2, \cdots , x_n$ 为任意实数, 求$$2\sum_{1\leq i<j \leq n}\left \lfloor x_ix_j \right \rfloor-\left ( n-1 \right )\sum_{i=1}^{n}\left \lfloor x_i^2 \right \rfloor $$的最大值
+\eex
+
+\bex
+有$3$个恰$n$ 个学生的班, 这$3n$ 个学生身高两两不同。现在把他们分成$n$个 $3$ 人小组,每组人恰来自三个班。把每个小组中最高的同学称为“高个子”，已知任意分组中任何一班都至少有$10$个“高个子”。证明： $n$最小可能值是 $40$.
+\eex
+\bex
+$p,q$ 为不同质数且 $p>q$. 证明：$t=\gcd(p!-1,q!-1)$不超过$t\le p^{\frac{p}{3}}$.
+\eex
+
+\bex
+求一切实数列$\{b_n\}_{n \geq 1}$ 和 $\{c_n\}_{n \geq 1}$ 满足:
+(i) 对任意 $n$, $b_n \leq c_n$;
+(ii) 对任意$n$, $b_{n+1}$ 和$c_{n+1}$为 $x^2+b_nx+c_n=0$的两根.
+\eex
+
+\bex
+$p, q$ 为大于一的整数 , $(p, \,6q)=1$. 证明:$$\sum_{k=1}^{q-1}\left \lfloor \frac{pk}{q}\right\rfloor^2 \equiv 2p \sum_{k=1}^{q-1}k\left\lfloor \frac{pk}{q} \right\rfloor (mod \, q-1)$$
+\eex
+
+\bex
+$O$ 为$\triangle ABC$外接圆, $\angle BAC=120^{\circ}$. 外接圆在$A，B$ 处的切线交于$P$ ,在$A,C$ 处的切线交于$Q$ . $H,I$ 分别为 $\triangle OPQ$ 的垂心和内心. $M,N$ 分别为弧 ${BAC}$ 和 $OI$ 的中点, $MN$ 交$(ABC)$外接圆于$D$. 证明：$AD$ 与$HI$垂直.
+\eex
+
+\bex
+$n$ 是一个给定正整数. 正整数数列$(a_1,a_2,\cdots,a_m)$ 满足:
+(1)$a_1+a_2+\cdots+a_m=n$.
+(2)恰有偶数对$(i,j)$满足$1\leq i<j\leq m$ 且 $a_i>a_j$ .
+比如 $n=4$时, $(4),$ $(1,3),$ $(2,2),$ $(1,1,2),$ $(2,1,1),$ $(1,1,1,1)$都是合乎题意的.
+求合题数列的数量
+\eex
+
+\section{2020年USEMO}
+\bex
+$ABCD$ 为圆内接四边形. 圆 $O$ 过$B$ 和 $D$ 且与 $BA$和 $BC$ 分别交于 $E$和 $F$ (与$A$, $B$, $C$不重合). $H$ 为 $\triangle DEF$垂心. 证明：若$AC$, $DO$, $EF$共点, 则$\triangle ABC$ 与 $\triangle EHF$相似.
+\eex
+
+\bex
+$\mathbb{Z}[x]$ 表示全体以 $x$ 为唯一变元的整系数多项式构成的集合. 求一切 $\theta: \mathbb{Z}[x] \rightarrow \mathbb{Z}[x]$ 满足：
+1) 对任意$p$, $q$ $\in$ $\mathbb{Z}[x]$, $\theta(p + q) = \theta(p) + \theta(q)$
+2) 对任意 $p$ $\in$ $\mathbb{Z}[x]$, $p$ 有整数根当且仅当 $\theta(p)$ 有整数根.
+\eex
+
+\bex
+考察一个由单位正方形构成的无穷大方格表$G$ . 一个“棋盘 ”是指用$G$的若干条长1线段围成的不自交的多边形.
+
+A 选择一个“棋盘”$F$ 然后你把 $G$ 中若干单位正方形染绿, 使得任何与$F$ 全等的棋盘含有的绿色单位正方形个数均在$1$到$2020$之间. A 可否选择适当$F$ 使你无法做到这一点?
+\eex
+\bex
+
+证明：对于任意质数 $p,$ 存在正整数$n$ 使得
+[1^n+2^{n-1}+3^{n-2}+\cdots+n^1\equiv 2020\pmod{p}.]
+
+\eex
+
+\bex
+
+正多边形$\mathcal{P}$ 的顶点集为$\mathcal{V}$ . $\mathcal{V}$ 中一切点均被染成红白兰三色之一. 若 $\mathcal{V}$ 的一个子集三种颜色顶点数相同，称这个子集“爱国”, 若$\mathcal{P}$ 的一条边两端点颜色不同，称这条边“酷”.
+
+若$\mathcal{V}$ “爱国”且$\mathcal{P}$ 中恰有偶数条“酷”的边. 证明存在一条平面上不过任何$\mathcal{V}$中点的直线, 把$\mathcal{V}$分成两个“爱国”集.
+\eex
+
+\bex
+
+不等边$\triangle ABC$ 外心为 $O$ 高线为 $AD$, $BE$, $CF$. 取 $X$, $Y$, $Z$ 分别为 $AD$, $BE$, $CF$中点. $AD$交$YZ$ 于 $P$, $BE$交$ZX$ 于$Q$, $CF$ 交 $XY$ 于 $R$.
+$YZ$ 交$BC$ 于$A'$, $QR$ 与 $EF$ 交于$D'$. 证明：从 $A$, $B$, $C$, $O$ 分别引出的对 $QR$, $RP$, $PQ$, $A'D'$所做的四条垂线交于一点.
+\eex
+
+
+\section{2020年美国ELMO}
+\bex
+$\mathbb{N}$ 为正整数集. 求一切$f : \mathbb{N} \to \mathbb{N}$ 使得$$f^{f^{f(x)}(y)}(z)=x+y+z+1$$for all $x,y,z \in \mathbb{N}$.
+\eex
+
+\bex
+规定 $F_1 = F_2 = 1$ 且 $F_n = F_{n-1} + F_{n-2}$ 对一切$n\geq 3$. $k$ 为正整数，使得对一切正整数 m 存在 $n$ 使得$m \mid F_n-k$. $k$ 是否必定是数列中的一项?
+\eex
+
+\bex
+你有一个装置, 对任意点$U$ 和$V$ , 可以做出 $UV$的中垂线. 证明可以使用此装置和一根铅笔，做出任意已给出三边所在直线的三角形的垂心.
+\eex
+
+\bex 
+不等边锐角三角形 $ABC$垂心为 $H$ 且 $AD$ 为$BC$边上的高，$D$为垂足. $M$ 为$BC$中点, $D'$ 为$D$ 关于$M$的对称. $P$ 在$D'H$ 上使$AP$和 $BC$ 平行, $\triangle AHP$ 和$\triangle BHC$ 外接圆交于 $G \neq H$. 证明 $\angle MHG = 90^\circ$.
+\eex
+
+\bex
+$m$ 和$n$ 为给定正整数. 求最小的正整数 $s$ 使得存在一个由正整数构成的 $m \times n$ 矩阵满足：
+每行为$n$ 个连续正整数按某种顺序排列,
+每列为$m$ 个连续正整数按某种顺序排列且
+最外圈的一切数均小于等于$s$.
+\eex
+
+\bex
+对一切正整数 $n$, 
+$\tau(n)$ 为$n$正因子个数,
+$\sigma(n)$ 为$n$正因子之和, 
+$\varphi(n)$ 为 $n$的欧拉函数.
+$a,b > 1$ 为给定正整数.每次操作可以选择把$n$变为$\tau(n)$, $\sigma(n)$, $\varphi(n)$之一. 证明可用若干次操作把$a$变成$b$.
+\eex
+
+\section{2020年KOREA MO}
+\bex
+$ABCD$ 为等腰梯形，$AB \parallel CD$ 且 $\overline{AD}=\overline{BC}, \overline{AB}>\overline{CD}$. $E$ 为一点满足 $\overline{EC}=\overline{AC}$ 且 $EC \perp BC$, $\angle ACE<90^{\circ}$. $\Gamma$ 以 $D$ 为圆心以$DA$为半径, $\Omega$ 为 $AEB$外接圆. $\Gamma$与$\Omega$ 交于 $F(\neq A)$, $G$ 为$\Gamma$ 上一点满足 $\overline{BF}=\overline{BG}$.
+证明：$EG, BD$ 与 $\Omega$交于一点.
+\eex
+
+\bex
+有 $2020$ 对男女朋友，他们满足：男生互不相识，女生也互不相识。男女朋友互相认识,任何两对男女朋友$4$人之间有至少$3$对认识关系.
+证明:可以挑出$4038$个人排成一圈，相邻的人相互认识.
+\eex
+
+\bex
+求一切 $f: \mathbb{Q}_{+} \rightarrow \mathbb{R}$ 使得[ f(x)+f(y)+f(z)=1 ]对任意 $x, y, z$ 满足$x+y+z+1=4xyz$均成立.
+\eex
+
+\bex 
+是否存在正实数$\alpha, \beta$使得以下数列为正整数集的一个排列?[ 2020, [\alpha], [\beta], 4040, [2\alpha], [2\beta], 6060, [3\alpha], [3\beta], \cdots ]
+\eex
+
+\bex
+锐角三角形$ABC$ 满足$\overline{AB}=\overline{AC}$. $M, L, N$ 分别为$BC, AM, AC$中点. $AMC$外接圆为 $\Omega$, 交$AB$于 $P(\neq A)$, 交 $BL$ 于 $Q$. $O$ 为$BQC$外心. $AC$ 交 $PQ$ 于 $X$, $OB$交 $LN$ 于$Y$, $BQ$ 和 $CO$ 交于$Z$. 证明： $X, Y, Z$共线.
+\eex
+
+\bex
+求一切正整数$n$ 使得$6(n^4-1)$ 为平方数.
+\eex
+
+\section{2020年USAMO}
+\bex
+锐角三角形$ABC$ 的外接圆和外心分别为 $\omega$ 和$O$. $X$为弧$AB$ 上的动点, $CX$ 交 $AB$ 于$D$. $O_1$和$O_2$为 $ADX$和$BDX$的外心. 求一切点 $X$ 使三角形$OO_1O_2$ 面积最小.
+\eex
+
+\bex
+给定 $2020 \times 2020 \times 2020$ 的立方体, 六个面上均为$2020 \times 2020$ 网格. 称$1 \times 1 \times 2020$ 为梁. 若干梁按以下规则放置:
+任何梁的 $1 \times 1$ f均为正方体表面网格上的单位正方形. 
+任两梁内部不相交.
+每根梁的四个$1 \times 2020$ 面均与其他梁的外表面或者正方体的内侧面相接触.
+求最少放置梁的数目?
+\eex
+
+\bex
+$p$ 为奇质数. $A$ 为全体满足 $1\le a<p$, $a$ 和 $4-a$ 均为二次非剩余的$a$构成 . 求$A$ 中元素之积被$p$除的余数.
+\eex
+
+\bex 
+$(a_1,b_1),$ $(a_2,b_2),$ $\dots,$ $(a_{100},b_{100})$ 为100对互不相同的有序非负整数对. $N$ 为 满足 $1\leq i<j\leq 100$ 且$|a_ib_j-a_jb_i|=1$的$(i,j)$个数. 求$N$的最大可能值.
+\eex
+
+\bex
+平面有限点集$S$ 称为：“高估的 ” 若$|S|\ge 2$ 且存在一个非零实系数多项式$P(t)$, 次数不超过 $|S|-2$, 满足对任意$(x,y)\in S$均有$P(x)=y$ .
+对一切 $n\ge 2$, 求最大的$k$ ：存在一个$n$ 元“高估”点集, 有至少 $k$ 个“高估”子集.
+\eex
+
+\bex
+$n \ge 2$ 为正整数. $x_1 \ge x_2 \ge ... \ge x_n$和 $y_1 \ge y_2 \ge ... \ge y_n$ 为 $2n$ 个实数满足$$0 = x_1 + x_2 + ... + x_n = y_1 + y_2 + ... + y_n $$$$\text{且} \hspace{2mm} 1 =x_1^2 + x_2^2 + ... + x_n^2 = y_1^2 + y_2^2 + ... + y_n^2.$$ 证明：$$\sum_{i = 1}^n (x_iy_i - x_iy_{n + i - 1}) \ge \frac{2}{\sqrt{n-1}}.$$
+\eex
+\end{document}

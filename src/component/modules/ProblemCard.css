@@ -1,0 +1,119 @@
+.problem-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.problem-card h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.problem-card p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #666;
+}
+
+.problem-content {
+  margin-top: 16px;
+  background-color: blanchedalmond;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.problem-content h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.problem-content div {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Style links within problem content */
+.problem-content a {
+  color: #007bff;
+  text-decoration: none;
+  border-bottom: 1px solid #007bff;
+}
+
+.problem-content a:hover {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+}
+
+.katex {
+  /* display: grid;
+  grid-template-rows: 1fr;
+
+  gap: 5px; */
+  padding: 10px;
+  /* 可选，添加间距 */
+}
+
+semantics {
+  overflow-x: auto;
+  overflow-y: visible;
+  height: 50px;
+  padding: 8px;
+}
+
+.problem-footer {
+  text-align: right;
+  /* Align buttons to the right */
+  padding: 10px;
+  /* Add padding for spacing */
+}
+
+.edit-button,
+.add-to-paper-button {
+  background-color: #007bff;
+  /* Button background color */
+  color: #fff;
+  /* Button text color */
+  padding: 8px 16px;
+  /* Add padding to the buttons */
+  margin-left: 8px;
+  /* Add spacing between buttons */
+  border: none;
+  /* Remove button border */
+  border-radius: 4px;
+  /* Add rounded corners */
+  cursor: pointer;
+  /* Add cursor pointer on hover */
+  font-size: 14px;
+  /* Adjust font size */
+}
+
+.edit-button:hover,
+.add-to-paper-button:hover {
+  background-color: #0056b3;
+  /* Change background color on hover */
+}
+
+.problem-header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.problem-header p {
+  margin: 0;
+  width: 33%;
+  /* Make each column take up 50% of the width */
+  box-sizing: border-box;
+}
+
+.problem-header p {
+  font-weight: bold;
+}
